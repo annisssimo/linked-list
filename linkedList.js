@@ -35,6 +35,12 @@ class LinkedList {
       lastNode = lastNode.nextNode;
     }
   }
+
+  //prepend(value) adds a new node containing value to the start of the list
+  prepend(value) {
+    const newNode = new Node(value, this.headNode);
+    this.headNode = newNode;
+  }
 }
 
 export default LinkedList;

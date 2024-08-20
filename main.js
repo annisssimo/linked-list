@@ -9,3 +9,7 @@ list.append('snake');
 list.append('turtle');
 
 console.log(list.toString());
+
+list.prepend('animals');
+
+console.log(list.toString());
