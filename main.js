@@ -27,3 +27,6 @@ console.log(list.at(3));
 list.pop();
 
 console.log(list.toString());
+
+console.log(list.contains('snake'));
+console.log(list.contains('turtle'));

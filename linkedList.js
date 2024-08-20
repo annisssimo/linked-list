@@ -91,6 +91,20 @@ class LinkedList {
     }
     current.nextNode = null;
   }
+
+  // contains(value) returns true if the passed in value is in the list and otherwise returns false.
+  contains(value) {
+    let currentNode = this.headNode;
+
+    while (currentNode) {
+      if (currentNode.value === value) {
+        return true;
+      }
+      currentNode = currentNode.nextNode;
+    }
+
+    return false;
+  }
 }
 
 export default LinkedList;
