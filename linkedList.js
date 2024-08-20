@@ -76,7 +76,7 @@ class LinkedList {
 
     while (currentNode) {
       if (count === index) {
-        return currentNode.value;
+        return currentNode;
       }
       currentNode = currentNode.nextNode;
       count++;
@@ -118,6 +118,25 @@ class LinkedList {
       currentNode = currentNode.nextNode;
       count++;
     }
+  }
+
+  // inserts a new node with the provided value at the given index
+  insertAt(value, index) {
+    if (index === 0) {
+      this.prepend(value);
+      return;
+    }
+    const previousNode = this.at(index - 1);
+    if (!previousNode) return;
+    const newNode = new Node(value, previousNode.nextNode);
+    previousNode.nextNode = newNode;
+  }
+
+  // removeAt(index) that removes the node at the given index
+  removeAt(index) {
+    const previousNode = this.at(index - 1);
+    if (!previousNode) return;
+    previousNode.nextNode = previousNode.nextNode.nextNode;
   }
 }
 
