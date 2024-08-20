@@ -10,6 +10,10 @@ list.append('turtle');
 
 console.log(list.toString());
 
+console.log(list.size());
+
 list.prepend('animals');
 
 console.log(list.toString());
+
+console.log(list.size());
