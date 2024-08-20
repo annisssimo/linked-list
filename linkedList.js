@@ -27,7 +27,7 @@ class LinkedList {
     }
 
     let lastNode = this.headNode;
-    while (lastNode !== null) {
+    while (lastNode) {
       if (lastNode.nextNode === null) {
         lastNode.nextNode = newNode;
         break;
@@ -46,7 +46,7 @@ class LinkedList {
     let currentNode = this.headNode;
     let count = 0;
 
-    while (currentNode !== null) {
+    while (currentNode) {
       currentNode = currentNode.nextNode;
       count++;
     }
@@ -61,11 +61,25 @@ class LinkedList {
   tail() {
     let currentNode = this.headNode;
 
-    while (currentNode !== null) {
+    while (currentNode) {
       if (currentNode.nextNode === null) {
         return currentNode.value;
       }
       currentNode = currentNode.nextNode;
+    }
+  }
+
+  // at(index) returns the node at the given index
+  at(index) {
+    let currentNode = this.headNode;
+    let count = 0;
+
+    while (currentNode) {
+      if (count === index) {
+        return currentNode.value;
+      }
+      currentNode = currentNode.nextNode;
+      count++;
     }
   }
 }
