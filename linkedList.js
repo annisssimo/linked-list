@@ -53,6 +53,10 @@ class LinkedList {
 
     return count;
   }
+
+  head() {
+    return this.headNode.value;
+  }
 }
 
 export default LinkedList;
