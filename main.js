@@ -23,3 +23,7 @@ console.log(list.head());
 console.log(list.tail());
 
 console.log(list.at(3));
+
+list.pop();
+
+console.log(list.toString());

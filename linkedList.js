@@ -82,6 +82,15 @@ class LinkedList {
       count++;
     }
   }
+
+  // pop removes the last element from the list
+  pop() {
+    let current = this.headNode;
+    while (current.nextNode.nextNode) {
+      current = current.nextNode;
+    }
+    current.nextNode = null;
+  }
 }
 
 export default LinkedList;
