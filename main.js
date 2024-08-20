@@ -30,3 +30,5 @@ console.log(list.toString());
 
 console.log(list.contains('snake'));
 console.log(list.contains('turtle'));
+
+console.log(list.find('cat'));
